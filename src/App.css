@@ -1,0 +1,77 @@
+*{margin:5px;}
+
+.h1-main
+{
+  color: #04AA6D;
+  padding: 10px;
+}
+
+.w3-bar,
+h1,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+.btn-styling{
+  background-color: #04AA6D;
+  border: 1px solid green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.btn-styling:disabled{
+  background-color: red;
+}
+
+
+input{
+  margin: 20px;
+  width: 30%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.div-style
+{
+  display: flex;
+  border-bottom: 1px solid #0e80cd; 
+  font-size: x-small;
+  color: #04AA6D;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+img{
+  width: 20%;
+  height: 50%;  
+  border-radius:20px;
+  margin:10px;
+}
+
+.div-btn{
+  position: absolute;
+  left:85%;
+  border-radius:20px;
+  text-align: center;
+}
+
+h4{
+  font-weight: bolder;
+  font-size: 5rem;
+  color: #1c5f46;
+  text-transform: capitalize;
+  
+}
+
+.img-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
