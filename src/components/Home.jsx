@@ -3,6 +3,7 @@ import Search from "./Search";
 import Users from "./Users";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import config from "./config/config";
 
 function Home({loading,setLoading}) {
   let [userData, setUserData] = useState([]);
@@ -17,8 +18,8 @@ function Home({loading,setLoading}) {
       let URL = `https://api.github.com/search/users?q=${username}`;
       let res = await axios.get(URL, {
         auth: {
-          username: "rajbir973",
-          password: "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",
+          username: config.VITE_GITHUB_USERNAME,
+          password: config.VITE_GITHUB_PASSWORD
         },
       });
       setUserData(res.data.items);
@@ -34,8 +35,8 @@ function Home({loading,setLoading}) {
       let URL = `https://api.github.com/users`;
       let res = await axios.get(URL, {
         auth: {
-          username: "rajbir973",
-          password: "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",
+          username: config.VITE_GITHUB_USERNAME,
+          password: config.VITE_GITHUB_PASSWORD
         },
       });
       setUserData(res.data);

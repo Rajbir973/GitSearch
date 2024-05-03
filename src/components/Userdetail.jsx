@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import Beaneater from "./Beaneater";
+import config from "./config/config";
 
 function Userdetail({ loading, setLoading }) {
   let { username } = useParams();
@@ -17,8 +18,8 @@ function Userdetail({ loading, setLoading }) {
       let URL = `https://api.github.com/users/${username}`;
       let res = await axios.get(URL, {
         auth: {
-          username: "rajbir973",
-          password: "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",
+          username: config.VITE_GITHUB_USERNAME,
+          password: config.VITE_GITHUB_PASSWORD
         },
       });
       setUserdetail(res.data);
@@ -34,8 +35,8 @@ function Userdetail({ loading, setLoading }) {
       let URL2 = `https://api.github.com/users/${username}/repos`;
       let repo = await axios.get(URL2, {
         auth: {
-          username: "rajbir973",
-          password: "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",
+          username: config.VITE_GITHUB_USERNAME,
+          password: config.VITE_GITHUB_PASSWORD
         },
       });
       console.log(repo.data);
