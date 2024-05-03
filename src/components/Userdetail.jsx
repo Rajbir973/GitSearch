@@ -58,27 +58,28 @@ function Userdetail({ loading, setLoading }) {
   if(loading)return <Beaneater/>
   return (
     <>
-      {
-        <div className="img-div">
-          <img src={Userdetail.avatar_url} />
+      {<>
+          <img className="new-img" src={Userdetail.avatar_url} />
           <h4>{Userdetail.login}</h4>
-          <p>{Userdetail.followers}</p>
-          <p>
+          <h3 className="repo-h3">Followers:{Userdetail.followers}</h3>
+
+
+          <div className="repo-div">
             {userRepo.map((repos) => {
               return (
-                <div key={repos.id}>
-                  <hr />
-
-                  <p>{repos.name}</p>
-                  <p>{repos.private ? "Private" : "Public"}</p>
-                  <p>{repos.language}</p>
-                  <p>{repos.license ? repos.license.spdx_id : null}</p>
-                  <p>{repos.updated_at}</p>
+                <div className="repo-innerdiv" key={repos.id}>
+                
+                  <p><strong>Repositry name:</strong>{repos.name}</p>
+                  <p><strong>Repositry Type:</strong>{repos.private ? "Private" : "Public"}</p>
+                  <p><strong>Coding Language:</strong>{repos.language}</p>
+                  <p><strong>Repositry License:</strong>{repos.license ? repos.license.spdx_id :"Null"}</p>
+                  <p><strong>Last Updated:</strong>{repos.updated_at}</p>
                 </div>
               );
             })}
-          </p>
-        </div>
+          </div>
+
+      </>
       }
     </>
   );

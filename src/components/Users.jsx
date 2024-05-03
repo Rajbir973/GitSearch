@@ -6,8 +6,9 @@ function Users(props) {
   return (
     <>
       {props.data.map((ele) => {
-        return (<>
-         <User key={ele.id} info={ele}/>
+        return (
+        <>
+            <User key={ele.id} info={ele}/>
         </>
         )
       })}

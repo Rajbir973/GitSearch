@@ -5,14 +5,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import config from "./config/config";
 
-function Home({loading,setLoading}) {
+function Home({loading,setLoading,alert,showAlert}) {
   let [userData, setUserData] = useState([]);
 
   async function reverseFlow(username) {
     try {
       setLoading(true)
       if (!username) {
-        alert("Username cannot be empty");
+        // window.alert("Username cannot be empty");
+      //  showAlert({message:"Username cannot be empty",type:"error"})
         return;
       }
       let URL = `https://api.github.com/search/users?q=${username}`;
@@ -26,6 +27,12 @@ function Home({loading,setLoading}) {
       setLoading(false)
     } catch (error) {
       console.log(error);
+      showAlert(
+        {
+          message:error.response.data.message, 
+        type:"error"
+      })
+
     }
   }
 
@@ -53,8 +60,12 @@ function Home({loading,setLoading}) {
 
   return (
     <>
-      <Search reverseData={reverseFlow} />
-      <Users data={userData} load={loading} />
+      
+      <Search reverseData={reverseFlow} alert={alert} />
+    <div className="div-user">
+
+          <Users data={userData} load={loading} />
+    </div>
     </>
   );
 }

@@ -38,18 +38,18 @@ input{
 
 .div-style
 {
-  display: flex;
   border-bottom: 1px solid #0e80cd; 
   font-size: x-small;
   color: #04AA6D;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50%;
 }
 
 
 
 img{
-  width: 20%;
-  height: 50%;  
+  width: 50%;
+  height: 70%;  
   border-radius:20px;
   margin:10px;
 }
@@ -69,9 +69,55 @@ h4{
   
 }
 
-.img-div{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.sucess{
+  color: #04AA6D;
 
+}
+
+.error{
+  color: red;
+}
+
+.div-user{
+  margin: 30px;
+   display:grid;
+   grid-template-columns: 33% 33% 33%;
+}
+
+.main-style{
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.new-img{
+  width: 20%;
+}
+
+
+.repo-h3{
+  color: #357da7;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.repo-innerdiv{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #357da7;
+  color: #cd799a;
+  width: 24%;
+  opacity:0.8;
+}
+.repo-innerdiv:hover{
+opacity: 1;
+}
+
+.repo-div{
+ display: flex;
+ flex-wrap: wrap;
+
+}
+
+strong{
+  color: #1c5f46;
 }
