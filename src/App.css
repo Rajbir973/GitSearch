@@ -165,3 +165,69 @@ strong{
 .div-user-1 h3 a:hover{
   color: #d11e65;
 }
+
+@media only screen and (max-width: 600px) 
+{
+  .div-user{
+    margin: 30px;
+     display:grid;
+     grid-template-columns:100%;
+  }
+
+  .repo-innerdiv{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #357da7;
+    color: #cd799a;
+    width: 100%;
+    opacity:0.8;
+    background-color: white;
+  }
+
+  .div-user-1 h3 a{
+    font-weight: bold;
+    font-size:medium;
+    text-decoration: none;
+    color: #357da7;
+  } 
+
+  .btn-styling{
+    background-color: #04AA6D;
+    border: 1px solid green;
+    color: white;
+    padding: 15px 32px;
+    margin-left: 7%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 80%;
+  
+  }
+
+  input{
+    margin: 20px;
+    width: 80%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: url('/src/assets/searchIcon.png');
+    background-repeat: no-repeat; 
+    background-position:right;
+    background-size: 10%;
+  }
+  
+  input:focus{
+    background:none;
+  }
+
+.h1-main
+{
+  color: #04AA6D;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+
+} 
