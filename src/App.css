@@ -1,5 +1,8 @@
 *{margin:5px;}
 
+body{
+  background-color:#F5F5F5 ;
+}
 .h1-main
 {
   color: #04AA6D;
@@ -21,6 +24,7 @@ button {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 20px;
 
 }
 
@@ -31,10 +35,20 @@ button {
 
 input{
   margin: 20px;
-  width: 30%;
+  width: 60%;
   padding: 12px 20px;
   box-sizing: border-box;
+  border-radius: 20px;
+  background: url('/src/assets/searchIcon.png');
+  background-repeat: no-repeat; 
+  background-position:right;
+  background-size: 3%;
 }
+
+input:focus{
+  background:none;
+}
+
 
 .div-style
 {
@@ -107,6 +121,7 @@ h4{
   color: #cd799a;
   width: 24%;
   opacity:0.8;
+  background-color: white;
 }
 .repo-innerdiv:hover{
 opacity: 1;
@@ -120,4 +135,33 @@ opacity: 1;
 
 strong{
   color: #1c5f46;
+}
+
+.div-user-1{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-transform: capitalize;
+  text-decoration-line:unset;
+  border-radius: 30px;
+  color: #5fbe57;
+  margin: 3%;
+}
+
+.div-user-1 img{
+  height: 90%;
+}
+
+.div-user-1 h3 a{
+  font-weight: bold;
+  font-size: x-large;
+  text-decoration: none;
+  color: #357da7;
+} 
+.div-user-1:hover{
+  background-color: rgb(232, 232, 232);
+}
+
+.div-user-1 h3 a:hover{
+  color: #d11e65;
 }

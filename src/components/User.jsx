@@ -6,12 +6,10 @@ function User(props) {
     <>
     {
         props.load?<h1><Beaneater/></h1>:
-        <div>
+        <div className="div-user-1" key={props.info.id}>
             <img src={props.info.avatar_url}/>
             {/* <button className="btn-styling div-btn"><Link to={props.info.login} state={{ info:props.info }}>{props.info.login}</Link></button> */}
-            <div className="div-style" key={props.info.id}>
-                <h1 key={props.info.id}><Link to={props.info.login} state={{ info:props.info }}>{props.info.login}</Link></h1>
-              </div>
+                <h3 key={props.info.id}><Link className="link" to={props.info.login} state={{ info:props.info }}>{props.info.login}</Link></h3>
         </div>
      } 
     </>
